@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Calculadora de Faixa Etária</h1>
+    <form>
+        <div>
+            <label for="codigo">Código</label>
+            <input id="codigo" name="codigo" type="text">
+        </div>
+        <div>
+            <label for="horas">Horas trabalhadas</label>
+            <input id="horas" name="horas" type="text">
+        </div>
+        <div>
+            <label for="turno">Turno</label>
+            <select id="turno" name="turno">
+                <option value="M">Matutino</option>
+                <option value="V">Vesperino</option>
+                <option value="N">Noturno</option>
+            </select>
+        </div>
+        <div>
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria">
+                <option value="G">Gerente</option>
+                <option value="F">Funcionário</option>
+            </select>
+        </div>
+        <div>
+            <label for="salario">Salário mínimo</label>
+            <input id="salario" name="salario" type="text">
+        </div>
+        <button id="botaoCalcular" type="button">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+</body>
+</html>
