@@ -1,16 +1,3 @@
-window.onload = function(){
-    const selectRegiao = document.getElementById("regiao");
-
-    for(let i = 0; i < regioes.length; i++){
-        const regiao = document.createElement("option");
-        regiao.innerText = regioes[i].nome;
-        regiao.value = i;
-        selectRegiao.appendChild(regiao);
-    }
-
-    selectRegiao.selectedIndex = 0;
-}
-
 document.getElementById("botaoCalcular").addEventListener(
     "click",
     function(){
