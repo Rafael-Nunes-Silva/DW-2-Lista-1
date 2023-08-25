@@ -32,15 +32,11 @@ document.getElementById("botaoCalcular").addEventListener(
         const regiao = regioes[parseInt(document.getElementById("regiao").selectedIndex)];
         const distancia = parseInt(document.getElementById("distancia").value);
         const precoCombustivel = parseFloat(document.getElementById("combustivel").value);
-
         
-
         let taxaRastreamento = (document.getElementById("rastreamento").checked ? 200 : 0);
-        let fretePecas = (Math.max(nPecas, 1000) * regiao.valor) + (Math.max(nPecas - 1000, 0) * (regiao.valor * (1 - regiao.desconto)));
-        let freteDistancia = 0;
-        let valorTotal = 0;
-
-
+        let fretePecas = (Math.min(nPecas, 1000) * regiao.valor) + Math.max(nPecas - 1000, 0) * (regiao.valor * (1 - regiao.desconto));
+        let freteDistancia = distancia * precoCombustivel;
+        let valorTotal = taxaRastreamento + fretePecas + freteDistancia;
 
         document.getElementById("taxaRastreamento").innerText = `Taxa de rastreamento: ${taxaRastreamento}.`;
         document.getElementById("fretePecas").innerText = `Valor do frete pelas peças: ${fretePecas}.`;
