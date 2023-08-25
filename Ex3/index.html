@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Calculadora de Faixa Etária</h1>
+    <form>
+        <div>
+            <label for="nPecas">Informe número de peças</label>
+            <input id="nPecas" name="nPecas" type="text">
+        </div>
+        <div>
+            <label for="regiao">Informe a região</label>
+            <select id="regiao" name="regiao">
+            </select>
+        </div>
+        <div>
+            <label for="distancia">Informe a distância (Km)</label>
+            <input id="distancia" name="distancia" type="number">
+        </div>
+        <div>
+            <label for="combustivel">Informe o preço do combustivel (L)</label>
+            <input id="combustivel" name="combustivel" type="number">
+        </div>
+        <div id="divRastreamento">
+            <label for="rastreamento">Deseja rastreamento?</label>
+            <input id="rastreamento" name="rastreamento" type="checkbox">
+        </div>
+        <button id="botaoCalcular" type="button">Calcular</button>
+    </form>
+    <p id="taxaRastreamento"></p>
+    <p id="fretePecas"></p>
+    <p id="freteKm"></p>
+    <p id="valorTotal"></p>
+</body>
+</html>
